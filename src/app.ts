@@ -1,5 +1,5 @@
 import { renderTodos } from "./utils";
-import { Store, reducer } from "./store";
+import { Store, reducer, ADD_TODO } from "./store";
 
 const input = document.querySelector("input") as HTMLInputElement;
 const button = document.querySelector("button") as HTMLButtonElement;
@@ -20,7 +20,7 @@ button.addEventListener(
     const payload = { label: input.value, complete: false };
 
     store.dispatch({
-      type: "ADD_TODO",
+      type: ADD_TODO,
       payload: payload,
     });
 
